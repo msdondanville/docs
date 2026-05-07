@@ -1,0 +1,136 @@
+/* Stuut Support — custom Mintlify styling
+   Pushes the default Mintlify look closer to the original HTML site.
+   Loaded automatically by Mintlify when present at the repo root. */
+
+:root {
+  --stuut-blue: #2F85DB;
+  --stuut-blue-deep: #1B4F8F;
+  --stuut-yellow: #F2F56F;
+  --stuut-yellow-soft: #FAFCB8;
+  --stuut-orange: #D6380E;
+  --stuut-cream: #F2F0EB;
+}
+
+/* ---------- Announcement banner: bold orange like original ---------- */
+[class*="banner"] {
+  background: var(--stuut-orange) !important;
+  color: white !important;
+  font-family: "Courier New", ui-monospace, Menlo, monospace !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2px !important;
+}
+[class*="banner"] a {
+  color: white !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+/* ---------- Topbar Ask AI button: yellow highlighter look ---------- */
+button[aria-label*="Ask AI" i],
+button[class*="ask-ai" i],
+a[href*="chat"] button {
+  background: var(--stuut-yellow) !important;
+  color: var(--stuut-blue-deep) !important;
+  border: 2px solid var(--stuut-blue) !important;
+  font-weight: 600 !important;
+}
+button[aria-label*="Ask AI" i]:hover {
+  background: var(--stuut-yellow-soft) !important;
+}
+
+/* ---------- Primary buttons: chunky blue with offset shadow ---------- */
+.btn-primary,
+button[class*="primary"]:not([class*="secondary"]),
+a[class*="bg-primary"] {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- Cards (CardGroup): blue outline + offset shadow like HTML ---------- */
+[class*="CardGroup"] [class*="card"],
+[class*="card-group"] [class*="card"],
+a[class*="rounded"][class*="border"] {
+  border: 2px solid var(--stuut-blue) !important;
+  box-shadow: 4px 4px 0 var(--stuut-blue) !important;
+  border-radius: 12px !important;
+  transition: all 0.15s ease !important;
+}
+[class*="CardGroup"] [class*="card"]:hover,
+a[class*="rounded"][class*="border"]:hover {
+  box-shadow: 6px 6px 0 var(--stuut-blue) !important;
+  transform: translate(-2px, -2px) !important;
+}
+
+/* ---------- Headings: bold display weight, Stuut blue on H1 ---------- */
+h1 {
+  color: var(--stuut-blue) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.8px !important;
+  font-size: 2.5rem !important;
+}
+h2 {
+  font-weight: 700 !important;
+  letter-spacing: -0.4px !important;
+  border-bottom: 2px solid var(--stuut-blue) !important;
+  padding-bottom: 0.4rem !important;
+  margin-top: 2rem !important;
+}
+
+/* ---------- Accordion title styling ---------- */
+[class*="accordion"] button[aria-expanded] {
+  font-weight: 600 !important;
+}
+[class*="accordion"] button[aria-expanded="true"] {
+  color: var(--stuut-blue) !important;
+}
+
+/* ---------- Sidebar: monospace links like the original TOC ---------- */
+nav[aria-label*="Sidebar" i] a,
+aside nav a {
+  font-family: "Courier New", ui-monospace, Menlo, monospace !important;
+  font-size: 13.5px !important;
+}
+
+/* ---------- Sidebar group label ---------- */
+nav[aria-label*="Sidebar" i] [class*="group" i]:not(a) > div:first-child,
+aside nav h3,
+aside nav [class*="heading"] {
+  font-family: "Courier New", ui-monospace, Menlo, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  color: var(--stuut-blue) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Search bar: lighter Stuut accent ---------- */
+button[aria-label*="Search" i] {
+  border: 1.5px solid var(--stuut-blue) !important;
+  color: var(--stuut-blue) !important;
+}
+
+/* ---------- Tables: brand outlines ---------- */
+table th {
+  background: var(--stuut-blue) !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+table, table th, table td {
+  border-color: var(--stuut-blue) !important;
+}
+
+/* ---------- Callouts: more pronounced ---------- */
+[class*="callout"][class*="warning" i],
+[class*="warning"] {
+  border-left-width: 4px !important;
+}
+[class*="callout"][class*="tip" i],
+[class*="tip"] {
+  border-left-width: 4px !important;
+}
+
+/* ---------- Logo: keep the mascot looking right ---------- */
+img[alt*="logo" i] {
+  height: 40px !important;
+  width: auto !important;
+}

@@ -3,10 +3,28 @@
   "theme": "mint",
   "name": "Stuut Support",
   "description": "AI-powered help center for collectors, billing specialists, and finance staff.",
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
   "colors": {
     "primary": "#2F85DB",
     "light": "#5DA5E8",
     "dark": "#1B4F8F"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 700,
+      "format": "woff2",
+      "source": "https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400,
+      "format": "woff2",
+      "source": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+    }
   },
   "favicon": "/mascot.svg",
   "logo": {
@@ -18,42 +36,33 @@
     "content": "Welcome to Stuut Support — your AI-powered help center.",
     "dismissible": true
   },
+  "styling": {
+    "eyebrows": "section"
+  },
   "navigation": {
     "groups": [
       {
-        "group": "Welcome",
-        "pages": ["introduction"]
-      },
-      {
-        "group": "📂 Collections",
+        "group": "On this page",
         "pages": [
+          "introduction",
+          "getting-started",
           "daily-workflow",
           "emails-and-drafts",
           "ai-call-agent",
-          "promise-to-pay",
-          "disputes",
-          "payment-portal"
-        ]
-      },
-      {
-        "group": "💵 Cash App",
-        "pages": [
           "cash-application",
-          "payments"
-        ]
-      },
-      {
-        "group": "🖥 Platform",
-        "pages": [
-          "getting-started",
+          "promise-to-pay",
           "customers-invoices",
+          "payments",
+          "disputes",
+          "payment-portal",
           "troubleshooting",
-          "glossary"
+          "glossary",
+          "videos"
         ]
       },
       {
-        "group": "Resources",
-        "pages": ["videos"]
+        "group": "Need more help?",
+        "pages": []
       }
     ]
   },
