@@ -14,16 +14,10 @@
   },
   "fonts": {
     "heading": {
-      "family": "Inter",
-      "weight": 700,
-      "format": "woff2",
-      "source": "https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+      "family": "Inter"
     },
     "body": {
-      "family": "Inter",
-      "weight": 400,
-      "format": "woff2",
-      "source": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      "family": "Inter"
     }
   },
   "favicon": "/mascot.svg",
@@ -40,30 +34,20 @@
     "eyebrows": "section"
   },
   "navigation": {
-    "groups": [
-      {
-        "group": "On this page",
-        "pages": [
-          "introduction",
-          "getting-started",
-          "daily-workflow",
-          "emails-and-drafts",
-          "ai-call-agent",
-          "cash-application",
-          "promise-to-pay",
-          "customers-invoices",
-          "payments",
-          "disputes",
-          "payment-portal",
-          "troubleshooting",
-          "glossary",
-          "videos"
-        ]
-      },
-      {
-        "group": "Need more help?",
-        "pages": []
-      }
+    "pages": [
+      "getting-started",
+      "daily-workflow",
+      "emails-and-drafts",
+      "ai-call-agent",
+      "cash-application",
+      "promise-to-pay",
+      "customers-invoices",
+      "payments",
+      "disputes",
+      "payment-portal",
+      "troubleshooting",
+      "glossary",
+      "videos"
     ]
   },
   "navbar": {
@@ -83,8 +67,5 @@
     "socials": {
       "website": "https://stuut.ai"
     }
-  },
-  "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude"]
   }
 }
