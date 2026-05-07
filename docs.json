@@ -1,97 +1,81 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "theme": "mint",
+  "name": "Stuut Support",
+  "description": "AI-powered help center for collectors, billing specialists, and finance staff.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#2F85DB",
+    "light": "#5DA5E8",
+    "dark": "#1B4F8F"
   },
-  "favicon": "/favicon.ico",
-  "icons": {
-    "library": "lucide"
+  "favicon": "/mascot.svg",
+  "logo": {
+    "light": "/light.svg",
+    "dark": "/dark.svg",
+    "href": "/"
   },
-  "styling": {
-    "eyebrows": "breadcrumbs"
-  },
-  "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  "banner": {
+    "content": "Welcome to Stuut Support — your AI-powered help center.",
+    "dismissible": true
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Home",
-          "icon": "house",
-          "href": "/"
-        },
-        {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
-        }
-      ]
-    },
-    "directory": "card",
     "groups": [
       {
-        "group": "Platform",
-        "icon": "layers",
-        "expanded": true,
+        "group": "Welcome",
+        "pages": ["introduction"]
+      },
+      {
+        "group": "📂 Collections",
         "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+          "daily-workflow",
+          "emails-and-drafts",
+          "ai-call-agent",
+          "promise-to-pay",
+          "disputes",
+          "payment-portal"
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
-        "expanded": true,
+        "group": "💵 Cash App",
         "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
+          "cash-application",
+          "payments"
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
+        "group": "🖥 Platform",
         "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+          "getting-started",
+          "customers-invoices",
+          "troubleshooting",
+          "glossary"
         ]
+      },
+      {
+        "group": "Resources",
+        "pages": ["videos"]
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Email support",
+        "href": "mailto:support@stuut.co"
+      }
+    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Dashboard",
+      "href": "https://dashboard.stuut.co"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
+      "website": "https://stuut.ai"
     }
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
   }
 }
