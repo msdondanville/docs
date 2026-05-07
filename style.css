@@ -1,6 +1,5 @@
 /* Stuut Support â€” custom Mintlify styling
-   Targeted, conservative â€” only the elements where we want a clear visual win.
-   If a selector misses, Mintlify keeps its default â€” no broken layout. */
+   Targeted, conservative â€” only the elements where we want a clear visual win. */
 
 :root {
   --stuut-blue: #2F85DB;
@@ -10,7 +9,27 @@
   --stuut-cream: #F2F0EB;
 }
 
-/* ---------- Cards (CardGroup): blue outline + offset shadow like the original HTML ---------- */
+/* ---------- Hide the entire right "On this page" TOC ---------- */
+aside[aria-label*="On this page" i],
+aside[aria-label*="Table of contents" i],
+[class*="TableOfContents"],
+[data-testid*="toc" i],
+nav[aria-label*="On this page" i] {
+  display: none !important;
+}
+
+/* ---------- Make main content area use the recovered width ---------- */
+main, [class*="main-content"], article {
+  max-width: 100% !important;
+}
+
+/* ---------- Hide sidebar group label fallback (in case "On this page" still renders there) ---------- */
+aside nav h2,
+aside nav h3 {
+  display: none !important;
+}
+
+/* ---------- Cards (CardGroup): blue outline + offset shadow ---------- */
 [class*="CardGroup"] [class*="card"],
 [class*="card-group"] [class*="card"],
 a[class*="rounded"][class*="border"] {
@@ -47,17 +66,6 @@ aside nav a {
   font-size: 13.5px !important;
 }
 
-/* ---------- Sidebar group label: small monospace caps ---------- */
-aside nav [class*="heading"],
-aside nav [class*="group"] > div:first-child {
-  font-family: "Courier New", ui-monospace, Menlo, monospace !important;
-  font-size: 11px !important;
-  letter-spacing: 0.6px !important;
-  text-transform: uppercase !important;
-  color: var(--stuut-blue) !important;
-  font-weight: 700 !important;
-}
-
 /* ---------- Tables: brand outlines ---------- */
 table th {
   background: var(--stuut-blue) !important;
@@ -68,7 +76,7 @@ table, table th, table td {
   border-color: var(--stuut-blue) !important;
 }
 
-/* ---------- Logo height: keep mascot visible ---------- */
+/* ---------- Logo: keep mascot visible at proper size ---------- */
 img[alt*="logo" i] {
   height: 40px !important;
   width: auto !important;
